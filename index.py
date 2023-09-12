@@ -45,7 +45,7 @@ st.text(" ")
 amount = st.number_input("Enter amount to request in GHS")
 url = "https://consumer-smrmapi.hubtel.com/request-money/233246919668"
 
-button = st.button("Pay")
+button = st.button("Create Link")
 if button:
     payload = json.dumps({
         "amount": amount,
