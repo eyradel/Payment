@@ -43,14 +43,15 @@ st.markdown(
 st.text(" ")
 
 amount = st.number_input("Enter amount to request in GHS")
+desp = st.text_input("Description")
 url = "https://consumer-smrmapi.hubtel.com/request-money/233246919668"
 
-button = st.button("Create Link")
+button = st.button("Pay")
 if button:
     payload = json.dumps({
         "amount": amount,
         "title": "SlayersAparel",
-        "description": "Pay for the Costume",
+        "description": desp,
         "clientReference": "e93ba437ac5b42b890e4133d2c69f2b3",
         "callbackUrl": "https://webhook.site/f28ce8b5-b94d-4a08-ad5c-0ad778846b2d",
         "cancellationUrl": "https://slayerstailorcraft.com/shop.php",
