@@ -70,8 +70,7 @@ if button:
         paylink_url = response_dict["data"]["paylinkUrl"]
         st.write(paylink_url)
         
-        pyperclip.copy(paylink_url)
-        pyperclip.paste()
+       
             
     except json.JSONDecodeError:
         st.error("Error decoding JSON response")
